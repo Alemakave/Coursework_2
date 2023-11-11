@@ -1,4 +1,4 @@
-package ru.alemakave.coursework_2;
+package ru.alemakave.coursework_2.examinerservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
