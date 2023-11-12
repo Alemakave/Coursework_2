@@ -28,7 +28,6 @@ class ExaminerServiceImplTest {
     public void getQuestions_Success() {
         when(javaQuestionService.getAll()).thenReturn(javaQuestionServiceGetAll());
         when(javaQuestionService.getRandomQuestion()).thenCallRealMethod();
-        when(javaQuestionService.getRandom()).thenCallRealMethod();
 
         List<Question> expectedResult = new ArrayList<>(examService.getQuestions(6));
 

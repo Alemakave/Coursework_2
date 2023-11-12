@@ -8,7 +8,6 @@ import java.util.*;
 
 @Service
 public class JavaQuestionService implements QuestionService {
-    private Random random = null;
     private final Set<Question> questions = new HashSet<>();
 
     @Override
@@ -41,17 +40,8 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Question getRandomQuestion() {
-        return (Question) getAll().toArray()[getRandom().nextInt(getAll().size())];
-    }
-
-    // Метод создан для работы с Mokito
-    @Override
-    public Random getRandom() {
-        if (random == null) {
-            random = new Random(20231106);
-        }
-
-        return random;
+        Random random = new Random();
+        return (Question) getAll().toArray()[random.nextInt(getAll().size())];
     }
 
     @PostConstruct
