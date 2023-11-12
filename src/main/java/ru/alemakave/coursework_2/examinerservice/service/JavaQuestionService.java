@@ -50,7 +50,7 @@ public class JavaQuestionService implements QuestionService {
 
         Random subRand = new Random(20231109);
         for (int i = 0; i < questionCount; i++) {
-            add("Question " + subRand.nextInt(25), "Answer " + subRand.nextInt(25));
+            add("Question " + subRand.nextInt(questionCount), "Answer " + subRand.nextInt(questionCount));
         }
     }
 }
